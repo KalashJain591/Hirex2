@@ -1,0 +1,33 @@
+  .slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+  }
+  
+  .slider {
+    margin: 3rem;
+    /* background-color: whitesmoke; */
+    /* padding: 8em 2em; */
+  }
+  
+  @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+  }
+  .heading{
+    font-family: inherit;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  .desc{
+    font-weight: 400;
+    font-style: italic;
+    color: revert;
+    font-size: 1.5rem;
+
+  }
+  @media (max-width: 800px) {
+    
+  }

@@ -1,0 +1,43 @@
+.sign-button, .register-button {
+    background-color:  #FFFFE0;
+    border: none;
+    color: #151414;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+/* Style for the sign in button */
+.sign-button {
+    background-color:  #FFA500;
+}
+.sign-button:hover {
+    background-color: #FFD700; /* Gold */
+
+}
+
+/* Hover effect for the register button */
+.register-button:hover {
+    background-color: #e6e69d; /* Chartreuse */
+}
+
+.company{
+    font-size: 2rem;
+    font-weight: bold;
+    color:#ffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 2ms smooth;
+   
+}
+
+.company:hover{
+    color: rgba(255,255,255,.55);
+}
