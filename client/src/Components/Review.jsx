@@ -3,7 +3,7 @@ import comma from '../assets/comma.png';
 import './CSS/Review.css'
 export default function Review() {
     return (
-        <div>
+        <div className='mt-5'>
             <div className='container-fluid'>
                 <h1 className='text-center Reviewhead' >What Our User Say</h1>
                 <div className='d-flex flex-wrap justify-content-evenly' style={{ fontSize: "2rem" }}>

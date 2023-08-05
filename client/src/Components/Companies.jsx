@@ -6,7 +6,7 @@ import Insta from '../assets/instagram.jpg'
 
 export default function Companies() {
     return (
-        <div>
+        <div >
             <h1 className='heading m-4'>Our Customers </h1>
             <div className='d-flex justify-content-center'>
                 <p className=' col-lg-6 desc col-10 text-center '>Unlocking Success for Staffing Teams Across the Globe:
@@ -139,7 +139,7 @@ export default function Companies() {
                     </div>
                 </div>
             </div>
-            <div class="slider">
+            <div class="slider" >
                 <div class="slide-track">
                     <div class="slide">
                         <img src={Micro} alt="" style={{
@@ -148,7 +148,7 @@ export default function Companies() {
                             animation: "scroll 60s linear infinite"
                         }} />
                     </div>
-                    <div class="slide">
+                    <div class="slide ">
                         <img src={Google} alt="" style={{
                             width: "100px",
                             height: "100px",

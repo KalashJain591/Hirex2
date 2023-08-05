@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CSS/Navbar.css'
-export default function Navbar() {
+import { NavLink, useNavigate } from 'react-router-dom'
+import { usercontext } from '../App'
+import axios from 'axios'
+export default function Navbar(props) {
+    const { isAuth } = useContext(usercontext);
+    const navigate=useNavigate();
+    const handleLogout=(e)=>{
+        axios.get('http://localhost:5000/users/logout')
+        .then((res)=>{
+            if(res.data==="Logout Succesfully")
+            {
+                alert("logout Successfully");
+                props.setAuth(false);
+                navigate('/home');
+            }
+        })
+        .catch(err=>console.log(err))
+    }
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-0 py-3">
@@ -20,10 +37,13 @@ export default function Navbar() {
                             <p><a className="nav-item nav-link mx-2" href="#">Features</a></p>
                             <p><a className="nav-item nav-link mx-2" href="#">Pricing</a></p>
                         </div>
-                        
-                        <button className="sign-button m-2">Sign In</button>
-                        <button className="register-button m-2">Register</button>
+                        {
+                            isAuth ?
+                                 <button className="sign-button m-2" onClick={handleLogout}>Logout</button>
 
+                                : <><NavLink to='/login' > <button className="sign-button m-2">Sign In</button></NavLink>
+                                    <NavLink to='/register'> <button className="register-button m-2">Register</button></NavLink></>
+                        }
                     </div>
 
 
